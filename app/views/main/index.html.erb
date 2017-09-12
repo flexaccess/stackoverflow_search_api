@@ -1,0 +1,36 @@
+<div class="row align-center">
+	<div class="columns small-7">
+		<a href="<%= root_path %>"><div class="logo">
+			<div class="logo-sub">Search API</div>
+		</div></a>
+
+
+		<%= form_tag '/main', method: 'get' do %>
+		<div class="input-group">
+			<%= text_field_tag :q, @q, class: 'input-group-field'%>
+			<div class="input-group-button">
+			<%= submit_tag 'Search', class: 'button primary large hollow' %>
+			</div>
+		</div>
+		<% end %>
+
+		<% if @q.nil? == false and @q.empty? == false %>
+		<a target="_blank" href="<%= @query %>">Request is generate</a>
+		<br>
+		<h3>Results for query "<%= @q %>"</h3>
+		<br>
+		<% unless @result['items'].empty? %>
+		<ul>
+			<% @result['items'].each do | item | %>
+			<li>
+				<h3><a href="<%= item['link'] %>" target="_blanck"><%= item['title'] %></a></h3>
+				<small><%= Time.at(item['creation_date']).strftime('%d.%m.%Y') %></small>
+			</li>
+			<% end %>
+		</ul>
+		<% else %>
+		<p>Sorry, not found</p>
+		<% end %>
+		<% end %>
+	</div>
+</div>

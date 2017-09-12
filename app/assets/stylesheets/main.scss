@@ -1,0 +1,23 @@
+// Place all the styles related to the main controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+*, *::before, *::after {
+    box-sizing: content-box;
+}
+
+.logo {
+	background: url('https://cdn.sstatic.net/Sites/stackoverflow/company/img/logos/so/so-logo.svg') no-repeat;
+	width:410px;
+	height: 100px;
+	margin: 0 auto 1.25rem; 
+}
+
+.logo-sub {
+	position: relative;
+	display: inline;
+	font-size: 1.5rem;
+	font-weight: 600;
+	top: 70px;
+	left: 250px;
+}
