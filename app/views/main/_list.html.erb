@@ -1,0 +1,8 @@
+<ul>
+	<% @result.each do | item | %>
+	<li class="result-list">
+		<h4><a href="<%= item['link'] %>" target="_blanck"><%= item['title'].gsub(/&#39;/,'\'') %></a>
+		<small class="date"><%= Time.at(item['creation_date']).strftime('%d.%m.%Y') %></small></h4>
+	</li>
+	<% end %>
+</ul>
