@@ -4,10 +4,10 @@ class ApiController < ApplicationController
 	end
 
 	def show
-		@id = params[:id]
+		id = params[:id]
 
-		@query = URI.escape("http://api.stackexchange.com/2.2/search?order=desc&sort=relevance&intitle=#{@id}&site=stackoverflow&filter=!Su916jdNbmxtsVd5Yq")
-		@result = Net::HTTP.get(URI.parse(@query))
+		query = URI.escape("http://api.stackexchange.com/2.2/search?order=desc&sort=relevance&intitle=#{id}&site=stackoverflow&filter=!Su916jdNbmxtsVd5Yq")
+		@result = Net::HTTP.get(URI.parse(query))
 		@answer = JSON.parse(@result)
 
 		unless @answer['items'].nil?
