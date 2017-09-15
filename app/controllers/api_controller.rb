@@ -22,6 +22,7 @@ class ApiController < ApplicationController
 
 		respond_to do |format|
 			format.html {render json: @result}
+			format.json {render json: @result}
 		end
 	end
 end
