@@ -14,8 +14,6 @@ class MainController < ApplicationController
 			else
 				@result = []
 			end
-		else
-			@result = false
 		end
 
 	end

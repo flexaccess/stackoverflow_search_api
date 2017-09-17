@@ -14,18 +14,18 @@
 		</div>
 		<% end %>
 
-		<div class="card animation-target">
-			<div class="card-section">
+		<div class="card search animation-target">
 		<% if @result %>
 			<% unless @result.empty? %>
+			<div class="card-section search__body">
 				<%= render 'list' %>
-			<% else %>
-				<p>Sorry, not found</p>
-			<% end %>
-		<% else %>
-			<p>Enter the request</p>
-		<% end %>
 			</div>
+			<% else %>
+			<div class="card-section search__body">
+				<p>Sorry, not found</p>
+			</div>
+			<% end %>
+		<% end %>
 		</div>
 
 	</div>
