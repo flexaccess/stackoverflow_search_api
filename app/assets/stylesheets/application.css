@@ -16,7 +16,25 @@
 
  */
 
+*, *::before, *::after {
+    box-sizing: content-box;
+}
 
+.logo {
+  background: url('https://cdn.sstatic.net/Sites/stackoverflow/company/img/logos/so/so-logo.svg') no-repeat;
+  width:410px;
+  height: 100px;
+  margin: 0 auto 1.25rem; 
+}
+
+.logo-sub {
+  position: relative;
+  display: inline;
+  font-size: 1.5rem;
+  font-weight: 600;
+  top: 70px;
+  left: 250px;
+}
 
 .animation-target {
   -webkit-animation: animation 500ms linear both;
@@ -46,4 +64,3 @@
   75.08% { -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0.038, 0, 1); transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0.038, 0, 1); }
   100% { -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); } 
 }
-

@@ -2,30 +2,6 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-*, *::before, *::after {
-    box-sizing: content-box;
-}
-
-body {
-	background: #edeef0;
-}
-
-.logo {
-	background: url('https://cdn.sstatic.net/Sites/stackoverflow/company/img/logos/so/so-logo.svg') no-repeat;
-	width:410px;
-	height: 100px;
-	margin: 0 auto 1.25rem; 
-}
-
-.logo-sub {
-	position: relative;
-	display: inline;
-	font-size: 1.5rem;
-	font-weight: 600;
-	top: 70px;
-	left: 250px;
-}
-
 .result-list {
 	padding-bottom: 1rem;
 	margin-bottom: 1rem;
