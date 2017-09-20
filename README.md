@@ -4,8 +4,8 @@ This is a microservice with of WEB interface running on the stackoverflow.com se
 
 * Ruby version 2.3.1
 * Without Data Base
-* gem 'rails', '~> 5.1.4'
-* gem 'foundation-rails', '~> 6.4', '>= 6.4.1.2'
+* Rails version 5.1.4
+* Foundation-rails version 6.4
 
 ### How does it work (WEB)?
 
