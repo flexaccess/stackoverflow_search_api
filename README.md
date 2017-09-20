@@ -1,24 +1,31 @@
-# README
+# SEARCH API BY STACKOVERFLOW.COM
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a microservice with of WEB interface running on the stackoverflow.com service API. It also has its own versions of the API.
 
-Things you may want to cover:
+* Ruby version 2.3.1
+* Without Data Base
+* gem 'rails', '~> 5.1.4'
+* gem 'foundation-rails', '~> 6.4', '>= 6.4.1.2'
 
-* Ruby version
+### How does it work (WEB)?
 
-* System dependencies
+Main Controller receives a GET request from a form on the main page and sends the stackoverflow API and displays on the main page. Example URL: http://localhost:3000/main?utf8=✓&q=sass&commit=Search, where 'q' = our request for stackoverflow API.
 
-* Configuration
+If the request does not exist or the query is empty - it will not be processed.
+If the returned result will be empty - there will be a message "Sorry, not found".
+If the API returned an error - the WEB version will display it as "Sorry, not found"
 
-* Database creation
+### How does it work (API)?
 
-* Database initialization
+The API works on the same principle. To submit your request, you need to apply at: http://localhost:3000/api/v1/search/sass.
+Here "sass" is your query. The Search controller will process it and return a JSON response.
 
-* How to run the test suite
+Example JSON:
 
-* Services (job queues, cache servers, search engines, etc.)
+{"items":[{"creation_date":1302722589,"question_id":5654447,"link":"https://stackoverflow.com/questions/5654447/whats-the-difference-between-scss-and-sass","title":"What&#39;s the difference between SCSS and Sass?"},{...},....}
 
-* Deployment instructions
+Here all founded the data provided by the "items".
 
-* ...
+If the request does not exist or the query is empty - {"error_id":404,"error_message":"Sorry, not found"}.
+If the returned result will be empty - {"error_id":404,"error_message":"Sorry, not found"}.
+If the API returned an error - {"error_id":ID,"error_message":"MESSAGE"}.
