@@ -1,4 +1,7 @@
 class MainController < ApplicationController
+	require 'net/http'
+	require 'net/https'
+	
 	def index
 
 		q = params[:q] || ''
