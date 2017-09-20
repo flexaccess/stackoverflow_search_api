@@ -27,5 +27,7 @@ Example JSON:
 Here all founded the data provided by the "items".
 
 If the request does not exist or the query is empty - {"error_id":404,"error_message":"Sorry, not found"}.
+
 If the returned result will be empty - {"error_id":404,"error_message":"Sorry, not found"}.
+
 If the API returned an error - {"error_id":ID,"error_message":"MESSAGE"}.
