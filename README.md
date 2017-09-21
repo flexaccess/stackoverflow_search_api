@@ -49,7 +49,7 @@ The example is **not empty** and **the existing** JSON response:
 
 Here all founded the data provided by the `items`.
 
-Request       | Answer SO API    | Main Controller
+Request       | Answer SO API    | Search Controller
 ------------- | ---------------- | ---------------
 Not exist     | Not processed    | {"error_id":404,"error_message":"Sorry, not found"}
 Empty         | Not processed    | {"error_id":404,"error_message":"Sorry, not found"}
