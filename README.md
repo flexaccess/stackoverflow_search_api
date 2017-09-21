@@ -15,18 +15,20 @@ Example GET request: `http://localhost:3000/main?utf8=✓&q=sass&commit=Search`,
 
 Request       | Answer SO API    | Main Controller
 ------------- | ---------------- | ---------------
-Not exist   | Not processed  | Not processed
-Empty       | Not processed  | Not processed
-Not Empty   | Items['Data']  | Display Data
-Not Empty   | Items[]        | Display 'not found'
-Not Empty   | Error_id       | Display 'not found'
+Not exist     | Not processed    | Not processed
+Empty         | Not processed    | Not processed
+Not Empty     | Items['Data']    | Display Data
+Not Empty     | Items[]          | Display 'not found'
+Not Empty     | Error_id         | Display 'not found'
+
+If the response is error, then it will be handled as "not found".
  
 ## How does it work (API)?
 
 #### Versions API:
 
 Version       | Date  
-------------- | ----------------
+------------- | -----------
 v1            | 20.09.2017
 
 The API works on the same principle. To submit your request, you need to apply at: `http://localhost:3000/api/v1/search/sass`.
@@ -49,8 +51,10 @@ Here all founded the data provided by the `items`.
 
 Request       | Answer SO API    | Main Controller
 ------------- | ---------------- | ---------------
-Not exist   | Not processed  | {"error_id":404,"error_message":"Sorry, not found"}
-Empty       | Not processed  | {"error_id":404,"error_message":"Sorry, not found"}
-Not Empty   | Items['Data']  | {"Items":[{...}, {...}, {...}]}
-Not Empty   | Items[]        | {"error_id":404,"error_message":"Sorry, not found"}
-Not Empty   | Error_id       | {"error_id":ID,"error_message":"MESSAGE"}
+Not exist     | Not processed    | {"error_id":404,"error_message":"Sorry, not found"}
+Empty         | Not processed    | {"error_id":404,"error_message":"Sorry, not found"}
+Not Empty     | Items['Data']    | {"Items":[{...}, {...}, {...}]}
+Not Empty     | Items[]          | {"error_id":404,"error_message":"Sorry, not found"}
+Not Empty     | Error_id         | {"error_id":ID,"error_message":"MESSAGE"}
+
+If the response is an error, it will be processed accordingly. Is displayed error code and message.
