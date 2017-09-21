@@ -15,11 +15,11 @@ Example GET request: `http://localhost:3000/main?utf8=✓&q=sass&commit=Search`,
 
 Request       | Answer SO API    | Main Controller
 ------------- | ---------------- | ---------------
-`Not exist`   | `Not processed`  | `Not processed`
-`Empty`       | `Not processed`  | `Not processed`
-`Not Empty`   | `Items['Data']`  | `Display Data`
-`Not Empty`   | `Items[]`        | `Display 'not found'`
-`Not Empty`   | `Error_id`       | `Display 'not found'`
+Not exist   | Not processed  | Not processed
+Empty       | Not processed  | Not processed
+Not Empty   | Items['Data']  | Display Data
+Not Empty   | Items[]        | Display 'not found'
+Not Empty   | Error_id       | Display 'not found'
  
 ## How does it work (API)?
 
@@ -49,8 +49,8 @@ Here all founded the data provided by the `items`.
 
 Request       | Answer SO API    | Main Controller
 ------------- | ---------------- | ---------------
-`Not exist`   | `Not processed`  | `{"error_id":404,"error_message":"Sorry, not found"}`
-`Empty`       | `Not processed`  | `{"error_id":404,"error_message":"Sorry, not found"}`
-`Not Empty`   | `Items['Data']`  | `{"Items":[{...}, {...}, {...}]}`
-`Not Empty`   | `Items[]`        | `{"error_id":404,"error_message":"Sorry, not found"}`
-`Not Empty`   | `Error_id`       | `{"error_id":ID,"error_message":"MESSAGE"}`
+Not exist   | Not processed  | {"error_id":404,"error_message":"Sorry, not found"}
+Empty       | Not processed  | {"error_id":404,"error_message":"Sorry, not found"}
+Not Empty   | Items['Data']  | {"Items":[{...}, {...}, {...}]}
+Not Empty   | Items[]        | {"error_id":404,"error_message":"Sorry, not found"}
+Not Empty   | Error_id       | {"error_id":ID,"error_message":"MESSAGE"}
