@@ -23,7 +23,7 @@ Request       | Answer SO API    | Main Controller
  
 ### How does it work (API)?
 
-####Versions API:
+#### Versions API:
 
 Version       | Date  
 ------------- | ----------------
@@ -39,8 +39,10 @@ The example is **not empty** and **the existing** JSON response:
 
     {
     	"items":[
-    		{"creation_date":1302722589,"question_id":5654447,"link":"https://stackoverflow.com/questions/5654447/whats-the-difference-between-scss-and-sass","title":"What is the difference between SCSS and Sass?"},
-    		{...},{...},{...}
+    		{"creation_date":1302722589,
+    		"question_id":5654447,
+    		"link":"https://stackoverflow.com/questions/5654447/whats-the-difference-between-scss-and-sass",
+    		"title":"What is the difference between SCSS and Sass?"}
     	]
     }
 
